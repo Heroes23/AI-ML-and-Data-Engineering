@@ -1,0 +1,45 @@
+# version: "3"
+
+# services:
+#   app:
+#     build: .
+#     container_name: my_app
+#     environment:
+#       SNOWFLAKE_ACCOUNT: xy12345.us-east-1
+#       SNOWFLAKE_USER: DEV_USER
+#       SNOWFLAKE_PASSWORD: test123
+#       SNOWFLAKE_ROLE: DEV_ROLE
+#       SNOWFLAKE_WAREHOUSE: DEV_WH
+#       SNOWFLAKE_DATABASE: DEV_DB
+#       SNOWFLAKE_SCHEMA: PUBLIC
+
+# version: "3"
+
+# services:
+#   app:
+#     container_name: snowflake_app
+#     build: .
+#     environment:
+#       SNOWFLAKE_ACCOUNT: IBHJDLM-AL52599
+#       SNOWFLAKE_USER: HEROES23
+#       SNOWFLAKE_PASSWORD: ${SNOWFLAKE_PASSWORD}
+#       SNOWFLAKE_ROLE: ACCOUNTADMIN
+#       SNOWFLAKE_WAREHOUSE: COMPUTE_WH
+#       SNOWFLAKE_DATABASE: DEV_DB
+#       SNOWFLAKE_SCHEMA: PUBLIC
+
+
+services:
+  app:
+    container_name: snowflake_app
+    image: python:3.11-slim
+    environment:
+      SNOWFLAKE_ACCOUNT: IBHJDLM-AL52599
+      SNOWFLAKE_USER: HEROES23
+      SNOWFLAKE_PASSWORD: ${SNOWFLAKE_PASSWORD}
+      SNOWFLAKE_ROLE: ACCOUNTADMIN
+      SNOWFLAKE_WAREHOUSE: COMPUTE_WH
+      SNOWFLAKE_DATABASE: DEV_DB
+      SNOWFLAKE_SCHEMA: PUBLIC
+    volumes:
+      - .:/app

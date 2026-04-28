@@ -1,0 +1,7 @@
+ipywidgets
+ipykernel
+scikit-learn
+ydata-profiling
+pandas
+numpy 
+torch 

@@ -1,0 +1,37 @@
+services:
+  # Neo4J
+  neo4j:
+    image: neo4j:5.26.23-community
+    container_name: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    env_file:
+      - .env
+  
+  # MongoDB
+  mongodb:
+    image: mongo:4.4.20
+    container_name: mongodb
+    ports:
+      - "28020:27017"
+    env_file:
+      - .env
+  
+  # PostgreSQL
+  postgres:
+    image: postgres:12.14
+    container_name: postgres_container
+    ports:
+      - "5430:5432"
+    env_file:
+      - .env
+  
+
+  # ChromaDB
+  chromadb:
+    image: chromadb/chroma:1.5.6.dev60
+    container_name: chromadb
+    ports:
+      - "8007:8000"
+    

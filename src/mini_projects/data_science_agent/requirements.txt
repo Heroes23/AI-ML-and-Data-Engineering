@@ -1,0 +1,12 @@
+langchain<1.0
+langchain-core
+langchain-experimental
+langchain-openai
+langchain-mcp-adapters
+fastmcp
+sqlalchemy
+psycopg2-binary
+python-dotenv
+langchain-community
+langgraph
+
