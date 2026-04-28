@@ -1,4 +1,4 @@
-# zaed_sql_agent
+# SQL Agent
 
 A LangChain-powered SQL agent that connects to a PostgreSQL database and answers natural-language questions by generating and executing SQL queries autonomously.
 
